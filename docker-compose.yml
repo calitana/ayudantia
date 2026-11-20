@@ -35,5 +35,5 @@ services:
       retries: 10
       start_period: 20s
 
-  volumes:
-    datos-db:
+volumes:
+  datos-db:
