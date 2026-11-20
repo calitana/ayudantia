@@ -22,11 +22,11 @@ services:
     image: mariadb:11.4
     environment:
       MARIADB_ROOT_PASSWORD: root
-      MARIADB_DATABASE: ayudantiaS2
+      MARIADB_DATABASE: empresa_cloud
       MARIADB_USER: app
       MARIADB_PASSWORD: app123
     volumes:
-      - datos-db:/var/lib/MySQL
+      - datos-db:/var/lib/mysql
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
       test: ["CMD","healthcheck.sh","--connect","--innodb_initialized"]
