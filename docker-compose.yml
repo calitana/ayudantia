@@ -26,7 +26,7 @@ services:
       MARIADB_USER: app
       MARIADB_PASSWORD: app123
     volumes:
-      - datos-db:/var/lib/mysql
+      - datos-db:/var/lib/MySQL
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
       test: ["CMD","healthcheck","--connect","--innodb_initialized"]
